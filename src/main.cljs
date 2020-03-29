@@ -3,11 +3,17 @@
             [cljs.core.async :refer (chan put! <! go go-loop timeout)]
             ))
 
+(def state (atom [[:circle {:cx "50" :cy "50" :r "20" :stroke "green" :stroke-width "4"
+                            :fill "yellow"}]
+                  [:circle {:cx "150" :cy "50" :r "30" :stroke "green" :stroke-width "4"
+                            :fill "red"}]
+
+                  ]))
 
 (defn svg []
-  [:svg {:width "100" :height "100"}
-   [:circle {:cx "50" :cy "50" :r "30" :stroke "green" :stroke-width "4"
-             :fill "yellow"}]
+  [:svg {:width "200" :height "200"}
+   (for [c @state]
+     c)
    ])
 (defn main-component []
   [:div 
