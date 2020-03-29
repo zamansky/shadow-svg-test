@@ -6,7 +6,7 @@
 
 (defn svg []
   [:svg {:width "100" :height "100"}
-   [:circle {:cx "50" :cy "50" :r "30" :stroke "green" :stroke-width "4"
+   [:circle {:cx "50" :cy "50" :r "3Pp0" :stroke "green" :stroke-width "4"
              :fill "yellow"}]
    ])
 (defn main-component []
